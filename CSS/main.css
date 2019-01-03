@@ -31,4 +31,41 @@
     width:100%;
     display:block;
 }
-*{box-sizing: border-box;}
+*{box-sizing: border-box;margin:0;padding:0;}
+main{
+    width:80%;
+    margin:0 auto;
+}
+section{
+    border:1px solid white;
+}
+.icon-rmxf{
+    display:inline-block;
+    width: 33px;
+    height: 35px;
+    background: url(../Images/qy-dm-pageImg.png);
+    background-position: -80px -160px;
+}
+.big-wrapper{
+    height:100%;
+    border:1px solid white;
+
+}
+.small-wrapper{
+    border:1px solid white;
+    padding:10px;
+}
+.small-wrapper>div{
+    border:1px solid white;
+}
+.small-wrapper{
+    border:1px solid white;
+    overflow: hidden;
+}
+/* section > div>div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    float:left;
+    margin:0 1% 20px 1%;
+} */
