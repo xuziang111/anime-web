@@ -32,8 +32,8 @@
     display:block;
 }
 *{box-sizing: border-box;margin:0;padding:0;}
+p{margin:0}
 main{
-    width:80%;
     margin:0 auto;
 }
 section{
@@ -46,26 +46,82 @@ section{
     background: url(../Images/qy-dm-pageImg.png);
     background-position: -80px -160px;
 }
-.big-wrapper{
-    height:100%;
-    border:1px solid white;
+#tf-home{
 
 }
-.small-wrapper{
-    border:1px solid white;
-    padding:10px;
+
+@media (min-width: 1500px){
+    .big-wrapper{
+        width:430px;
+        border:1px solid white;
+        font-size:18px;
+    }
+    .small-wrapper{
+        margin-left:7px;
+        border:1px solid white;
+        width:210px;
+    }
+    .small-wrapper>div>div{
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+        overflow: hidden;
+        background:rgba(255,255,255,0.3)
+    }
+    main{
+        width:1300px;
+    }
+    .rmxf>div>ul{
+        display:flex;
+    }
+    .rmxf>div>ul>ul{
+        display:flex;
+        width:880px;
+        flex-wrap: wrap;
+    }
+    .rmxf>div>ul>ul>li:nth-child(1),.rmxf>div>ul>ul>li:nth-child(2),.rmxf>div>ul>ul>li:nth-child(3),.rmxf>div>ul>ul>li:nth-child(4){
+        margin-bottom:5px;
+    }
+    .ul-sec>li:nth-child(1){
+        margin-left:0px;
+    }
 }
-.small-wrapper>div{
-    border:1px solid white;
-}
-.small-wrapper{
-    border:1px solid white;
-    overflow: hidden;
-}
-/* section > div>div{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    float:left;
-    margin:0 1% 20px 1%;
+
+/* @media (max-width: 1500px) and (min-width:1250px){
+    .big-wrapper{
+        width:430px;
+        border:1px solid white;
+        font-size:18px;
+    }
+    .small-wrapper{
+        margin-left:7px;
+        border:1px solid white;
+        width:210px;
+    }
+    .small-wrapper>div>div{
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+        overflow: hidden;
+        background:rgba(255,255,255,0.3)
+    }
+    main{
+        width:1300px;
+    }
+    .rmxf>div>ul{
+        display:flex;
+    }
+    .rmxf>div>ul>ul{
+        display:flex;
+        width:880px;
+        flex-wrap: wrap;
+    }
+    .rmxf>div>ul>ul>li:nth-child(1),.rmxf>div>ul>ul>li:nth-child(2),.rmxf>div>ul>ul>li:nth-child(3),.rmxf>div>ul>ul>li:nth-child(4){
+        margin-bottom:5px;
+    }
+    .ul-sec>li:nth-child(6),.rmxf>div>ul>ul>li:nth-child(7),.rmxf>div>ul>ul>li:nth-child(8){
+        display:none;
+    }
+
+    .ul-sec>li:nth-child(1){
+        margin-left:0px;
+    }
 } */
