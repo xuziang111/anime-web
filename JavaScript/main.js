@@ -57,18 +57,7 @@ function ajaxsuccess(data,date){
     $(`.timetable>div>div:nth-child(${date})>ul>p`).remove()
     console.log(date)
     let temp = ''
-    for(let i=0;data.rmxf.length>i;i++){
-        if(data.rmxf.length-i ===1 ){
-            temp= temp+`
-        <li style="margin-right:auto">
-            <img src="${data.rmxf[i].img}">
-            <div>
-                <span class="time-title">${data.rmxf[i].title}</span>
-                <span class="time-update">${data.rmxf[i].num}</span>
-            </div>
-        </li>
-        `
-        }else{
+    for(let i=0;data.rmxf.length>i;i++){       
         temp= temp+`
         <li>
             <img src="${data.rmxf[i].img}">
@@ -78,7 +67,6 @@ function ajaxsuccess(data,date){
             </div>
         </li>
         `
-        }
     }
     $(`.timetable>div>div:nth-child(${date})>ul`).append(temp)
 }
