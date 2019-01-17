@@ -32,10 +32,12 @@ const newanime = Vue.component('newanime', {
             animedata:{}
         }
     },
-    created:function(){
-        if(this.pagestate.newanime === 0) {
+    mounted:function(){
+        this.animedata =  this.pagestate.newanime.data
+        if(this.pagestate.newanime.num === 0) {
             this.ajaxstart()
         }
+        console.log(this.animedata)
     },
     methods:{
         ajaxstart:function (){
@@ -77,7 +79,7 @@ const newanime = Vue.component('newanime', {
                     {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
                     {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
                 ]}
-            console.log(this.animedata)
+            this.$emit('newanimeopen',this.animedata)
         }
     }
 })

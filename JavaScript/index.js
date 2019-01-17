@@ -28,14 +28,15 @@ const app = new Vue({
     data:{
         pagestate:{
             index:0,
-            newanime:0,
+            newanime:{data:{},num:0},
             pastanime:0,
             movie:0,
         },
     },
     methods:{
-        newanimeadd:function(){
-            this.pagestate.newanime=1
+        newanimeadd:function(data){
+            this.pagestate.newanime.num=1
+            this.pagestate.newanime.data = data
         }
     },
 }).$mount('#app')
