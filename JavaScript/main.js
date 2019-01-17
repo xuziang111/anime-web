@@ -5,6 +5,7 @@ $("#top-carousel-carousel>div").toArray().forEach((element,index) => {
         $('#top-carousel').carousel(index)
     })
 });
+
 var week = [0,0,0,0,0,0,0]
 var date = new Date().getDay()
 week[date-1]=1
@@ -78,4 +79,9 @@ data={
 //测试用，上线换成sendajax(date)
 ajaxsuccess(data,date)
 console.log(week)
+
+
+
+
+
 })()

@@ -1,0 +1,23 @@
+#newanime-container{
+    text-align: left;
+}
+#newanime-container .anime-img-con{
+    width:170px;
+}
+#newanime-container .anime-img-con img{
+    width:100%;
+}
+.anime-title-con{
+
+}
+.anime-title-con>h4{
+    font-size:12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.anime-container{
+    display:flex;
+    flex-direction: column;
+    width:170px;
+}

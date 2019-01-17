@@ -28,43 +28,50 @@
     <!--此处style标签输入你的CSS样式，start-->
     <style>
         #tf-home {
-            background:url(Images/66474729_p0.jpg);
-            background-size:cover;
-            background-position:center;
-            background-attachment:fixed;
-            background-repeat:no-repeat;
-            color:#cfcfcf;
+            background: url(Images/66474729_p0.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #cfcfcf;
         }
+
         #tf-home .overlay {
             /*网页主体高度*/
-            height:2500px;
+            height: 2500px;
         }
+
         /*居中内容块*/
         #body-container.container {
             border: 1px solid #99CCFF;
-            background-color: rgba(153,204,255,0.1);
+            background-color: rgba(153, 204, 255, 0.1);
         }
+
         .content {
-            position:relative;
+            position: relative;
             /*响应式标记，全改为20%*/
-            padding:6% 0 0;
+            padding: 6% 0 0;
         }
-        @media (max-width: 640px){
+
+        @media (max-width: 640px) {
             .content {
-                padding:30% 0 0;
+                padding: 30% 0 0;
             }
         }
-        @media (max-width: 960px){
+
+        @media (max-width: 960px) {
             .content {
-                padding:15% 0 0;
+                padding: 15% 0 0;
             }
         }
-        .container{
+
+        .container {
             /*响应式标记，全改为15px*/
             padding-left: 0px;
             padding-right: 0px;
         }
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             .container {
                 padding-left: 15px;
                 padding-right: 15px;
@@ -75,7 +82,7 @@
     <!--此处引入你的外部CSS文件，end-->
     <!--*********************************************************************************************-->
     <link href="CSS/main.css" rel="stylesheet">
-
+    <link href="CSS/newanime.css" rel="stylesheet">
 
 </head>
 <body>
@@ -94,7 +101,7 @@
 <!-- Home Page 在此处修改你的内容
 ==========================================-->
 <div id="tf-home" class="text-center">
-    <div class="overlay">
+    <div class="overlay" id="app">
         <div class="content"><!--此处为内容块的总标题，根据需要删减修改-->
             <h1>郑州轻工业大学<strong><span class="color">动漫协会</span></strong></h1>
             <!--fa小图标使用方法百度font-awesome即可-->
@@ -103,207 +110,50 @@
         <div id="top-carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators" id="top-carousel-carousel">
-                <div data-target="#top-carousel" data-slide-to="0" class="active"><img src="./Images/01.jpg" alt="..."></div>
+                <div data-target="#top-carousel" data-slide-to="0" class="active"><img src="./Images/01.jpg" alt="...">
+                </div>
                 <div data-target="#top-carousel" data-slide-to="1"><img src="./Images/02.jpg" alt="..."></div>
                 <div data-target="#top-carousel" data-slide-to="2"><img src="./Images/03.jpg" alt="..."></div>
             </ol>
-          
+
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="./Images/1.jpg" alt="...">
-                <div class="carousel-caption">
+                <div class="item active">
+                    <img src="./Images/1.jpg" alt="...">
+                    <div class="carousel-caption">
+                    </div>
                 </div>
-              </div>
-              <div class="item">
-                <img src="./Images/2.jpg" alt="...">
-                <div class="carousel-caption">
+                <div class="item">
+                    <img src="./Images/2.jpg" alt="...">
+                    <div class="carousel-caption">
+                    </div>
                 </div>
-              </div>
-              <div class="item">
-                <img src="./Images/3.jpg" alt="...">
-                <div class="carousel-caption">
+                <div class="item">
+                    <img src="./Images/3.jpg" alt="...">
+                    <div class="carousel-caption">
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <main>
-                <section class="timetable">
-                        <!-- Nav tabs -->
-                        <ul id="timetablelist" class="nav nav-tabs" role="tablist">
-                          <li role="presentation"><a href="#Monday" aria-controls="Monday" role="tab" data-toggle="tab">周一</a></li>
-                          <li role="presentation"><a href="#Tuesday" aria-controls="Tuesday" role="tab" data-toggle="tab">周二</a></li>
-                          <li role="presentation"><a href="#Wednesday" aria-controls="Wednesday" role="tab" data-toggle="tab">周三</a></li>
-                          <li role="presentation"><a href="#Thursday" aria-controls="Thursday" role="tab" data-toggle="tab">周四</a></li>
-                          <li role="presentation"><a href="#Friday" aria-controls="Friday" role="tab" data-toggle="tab">周五</a></li>
-                          <li role="presentation"><a href="#Saturday" aria-controls="Saturday" role="tab" data-toggle="tab">周六</a></li>
-                          <li role="presentation"><a href="#Sunday" aria-controls="Sunday" role="tab" data-toggle="tab">周日</a></li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                          <div role="tabpanel" class="tab-pane active" id="Monday">
-                                <ul class="time-ul">
-                                    <p>...</p>
-                                </ul>
-                          </div>
-                          <div role="tabpanel" class="tab-pane" id="Tuesday"><ul class="time-ul"><p>...</p>
-                            </ul></div>
-                          <div role="tabpanel" class="tab-pane" id="Wednesday"><ul class="time-ul"><p>...</p>
-                            </ul></div>
-                          <div role="tabpanel" class="tab-pane" id="Thursday"><ul class="time-ul"><p>...</p>
-                            </ul></div>
-                          <div role="tabpanel" class="tab-pane" id="Friday"><ul class="time-ul"><p>...</p>
-                            </ul></div>
-                          <div role="tabpanel" class="tab-pane" id="Saturday"><ul class="time-ul"><p>...</p>
-                            </ul></div>
-                          <div role="tabpanel" class="tab-pane" id="Sunday"><ul class="time-ul"><p>...</p>
-                            </ul></div>
-                        </div>   
-                    </section>
-
-                <section class="text-left rmxf">
-                    <h4><span class="icon-rmxf"></span>日漫新番</h4>
-                    <div class="big-screen">
-                        <ul>
-                            <li class="big-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div><p>青春猪头少年不会梦到兔女郎学姐</p></div>
-                                </div>
-                            </li>
-                            <ul>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="small-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                        </ul>
-                        </ul>
-                            <ul class="ul-sec">
-                                <li class="small-wrapper">
-                                    <div>
-                                        <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                        <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                    </div>
-                                </li>
-                                <li class="small-wrapper">
-                                    <div>
-                                        <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                        <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                    </div>
-                                </li>
-                                <li class="small-wrapper">
-                                    <div>
-                                        <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                        <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                    </div>
-                                </li>
-                                <li class="small-wrapper">
-                                    <div>
-                                        <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                        <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                    </div>
-                                </li>
-                                <li class="small-wrapper">
-                                    <div>
-                                        <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                        <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                    </div>
-                                </li>
-                                <li class="small-wrapper">
-                                    <div>
-                                        <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                        <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                    </div>
-                                </li>
-                            </ul>
-                    </div>
-                    <div class="sm-screen">
-                        <ul>
-                            <li class="xs-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="xs-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="xs-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="xs-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="xs-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li>
-                            <li class="xs-wrapper">
-                                <div>
-                                    <div><img height="100%" width="100%" src="./Images/a_100158493_m_601_m4_480_360.jpg"></div>
-                                    <div>青春猪头少年不会梦到兔女郎学姐</div>
-                                </div>
-                            </li> 
-                        </ul>
-                    </div>
-                </section>
-          </main>
+        </div>
+        <nav id="anime-nav">
+            <ul>
+                <li><router-link to="/">首页</router-link></li>
+                <li><router-link to="/newanime">新番更新</router-link></li>
+                <li><router-link to="/pastanime">历年动画</router-link></li>
+                <li><router-link to="/movie">剧场ova</router-link></li>
+            </ul>
+        </nav>
+        <main>
+            <router-view></router-view>
+            <aside id="anime-aside">
+                <ul>
+                    <li><a href="#">时间表</a></li>
+                    <li><a href="#">新番更新</a></li>
+                    <li><a href="#">历年动画</a></li>
+                    <li><a href="#">剧场ova</a></li>
+                </ul>
+            </aside>
+        </main>
     </div>
 </div>
 <!--==========================================-->
@@ -324,17 +174,22 @@
 <!--Boostrap's JS-->
 <script type="text/javascript" src="JavaScript/3.3.7bootstrap.min.js"></script>
 <!--页面中的平滑滚动插件-->
-<script type="text/javascript" src="https://cdn.bootcss.com/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
-<!--jQuery智能布局插件 Isotope -->
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
+<!--<script type="text/javascript" src="https://cdn.bootcss.com/smoothscroll/1.4.6/SmoothScroll.min.js"></script>-->
+<!--&lt;!&ndash;jQuery智能布局插件 Isotope &ndash;&gt;-->
+<!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>-->
 <!--JQ幻灯片插件-->
 <script type="text/javascript" src="JavaScript/2.3.4owl.carousel.min.js"></script>
-<script src="./JavaScript/main.js"></script>
 <!--动漫协会官网基础JS-->
 <!-- <script type="text/javascript" src="http://www.zzuliacgn.cf/static/BaseJs.js"></script> -->
 <!--*********************************************************************************************-->
 <!--此处追加你要增加的外部JS文件标签，start ↓↓↓↓↓↓↓↓↓-->
 <!--例如：<script type="text/javascript" src="JavaScript/xxx.js"></script>-->
+<script type="text/javascript" src="./JavaScript/vue.js"></script>
+<script type="text/javascript" src="./JavaScript/indexvue.js"></script>
+<script type="text/javascript" src="./JavaScript/newanime.js"></script>
+<script type="text/javascript" src="./JavaScript/vue-router.js"></script>
+<script type="text/javascript" src="./JavaScript/index.js"></script>
+<script type="text/javascript" src="./JavaScript/main.js"></script>
 
 <!--此处追加你要增加的外部JS文件地址，end   ↑↑↑↑↑↑↑↑↑-->
 <!--*********************************************************************************************-->

@@ -274,3 +274,22 @@ section>div>ul>ul{
         background:grey;
     }
 }
+#anime-nav{
+    width:100%;
+    border:1px solid white;
+}
+#anime-nav>ul {
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:0;
+}
+#anime-aside{
+    position: fixed;
+    top:50%;
+    margin:auto;
+    right:10px;
+    transform:translateY(-50%);
+}
+#anime-aside>ul>li{
+    margin-bottom:10px;
+}
