@@ -23,5 +23,19 @@ const router = new VueRouter({
 // 记得要通过 router 配置参数注入路由，
 // 从而让整个应用都有路由功能
 const app = new Vue({
-    router
+    el:'#app',
+    router,
+    data:{
+        pagestate:{
+            index:0,
+            newanime:0,
+            pastanime:0,
+            movie:0,
+        },
+    },
+    methods:{
+        newanimeadd:function(){
+            this.pagestate.newanime=1
+        }
+    },
 }).$mount('#app')

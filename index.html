@@ -144,15 +144,7 @@
             </ul>
         </nav>
         <main>
-            <router-view></router-view>
-            <aside id="anime-aside">
-                <ul>
-                    <li><a href="#">时间表</a></li>
-                    <li><a href="#">新番更新</a></li>
-                    <li><a href="#">历年动画</a></li>
-                    <li><a href="#">剧场ova</a></li>
-                </ul>
-            </aside>
+            <router-view  v-on:newanimeopen="newanimeadd" :pagestate='pagestate'></router-view>
         </main>
     </div>
 </div>

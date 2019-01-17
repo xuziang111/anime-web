@@ -1,8 +1,8 @@
 #newanime-container{
     text-align: left;
 }
-#newanime-container .anime-img-con{
-    width:170px;
+.anime-img-con{
+
 }
 #newanime-container .anime-img-con img{
     width:100%;
@@ -19,5 +19,9 @@
 .anime-container{
     display:flex;
     flex-direction: column;
-    width:170px;
+
+}
+.anime-con-con{
+    display:flex;
+    flex-wrap:wrap;
 }
