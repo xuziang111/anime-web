@@ -31,10 +31,76 @@ const index = Vue.component('index', {
                 </ul>
 
                 <!-- Tab panes -->
-                <div class="tab-content" v-for="item in timeline.datas">
-                    <div role="tabpanel" class="tab-pane active" :id="item.name">
-                        <ul class="time-ul">
-                            <li v-for="datax in item.datas">
+                <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="Monday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[0].datas">
+                                <img :src=datax.img>
+                                <div>
+                                    <span class="time-title">{{datax.title}}</span>
+                                    <span class="time-update">{{datax.num}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Tuesday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[1].datas">
+                                <img :src=datax.img>
+                                <div>
+                                    <span class="time-title">{{datax.title}}</span>
+                                    <span class="time-update">{{datax.num}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Wednesday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[2].datas">
+                                <img :src=datax.img>
+                                <div>
+                                    <span class="time-title">{{datax.title}}</span>
+                                    <span class="time-update">{{datax.num}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Thursday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[3].datas">
+                                <img :src=datax.img>
+                                <div>
+                                    <span class="time-title">{{datax.title}}</span>
+                                    <span class="time-update">{{datax.num}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Friday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[4].datas">
+                                <img :src=datax.img>
+                                <div>
+                                    <span class="time-title">{{datax.title}}</span>
+                                    <span class="time-update">{{datax.num}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Saturday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[5].datas">
+                                <img :src=datax.img>
+                                <div>
+                                    <span class="time-title">{{datax.title}}</span>
+                                    <span class="time-update">{{datax.num}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Sunday">
+                                                <ul class="time-ul">
+                            <li v-for="datax in timeline.datas[6].datas">
                                 <img :src=datax.img>
                                 <div>
                                     <span class="time-title">{{datax.title}}</span>
@@ -110,7 +176,8 @@ const index = Vue.component('index', {
     },
     methods:{
         tlajax:function(num){
-            console.log('xxx')
+            let date = num
+            let _temp = this
             $.ajax({
                 type: "get",
                 url: "/timetable",
@@ -121,10 +188,13 @@ const index = Vue.component('index', {
 
                 },
                 success: function(data){
-                    ajaxsuccess(data)
+                    // _temp.datas[num].datas = data
                 },
                 error:function(){
-                    ajaxerror(data,date)
+                    console.log(_temp,date)
+                    //test
+                    _temp.timeline.datas[num].datas = _temp.testdata.tl
+                    $(`#timetablelist li:eq(${{num}}) a`).tab('show')
                 },
                 complete:function(){
 
@@ -133,7 +203,7 @@ const index = Vue.component('index', {
         },
         tlclick:function(index){
             if(this.tlifclick[index]===0){
-                this.tlajax()
+                this.tlajax(index)
             }
         }
     },

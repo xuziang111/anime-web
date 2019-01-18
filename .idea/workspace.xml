@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="132d3583-94ff-4855-a9a1-19cdcbf1cdd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScript/pastanime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/newanime.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/newanime.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/indexvue.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/indexvue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -25,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="146" column="75" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="75" />
+            <state relative-caret-position="462">
+              <caret line="146" column="76" selection-start-line="146" selection-start-column="76" selection-end-line="146" selection-end-column="76" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -37,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSS/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
+            <state relative-caret-position="1122">
               <caret line="184" selection-start-line="184" selection-end-line="184" />
             </state>
           </provider>
@@ -64,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript/newanime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="63" />
+            <state relative-caret-position="-408">
+              <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -73,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JavaScript/indexvue.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+            <state relative-caret-position="204">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -82,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="27" selection-start-line="27" selection-end-line="45" selection-end-column="6" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -91,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript/pastanime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+            <state relative-caret-position="153">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -130,8 +125,8 @@
         <option value="$PROJECT_DIR$/CSS/newanime.css" />
         <option value="$PROJECT_DIR$/JavaScript/pastanime.js" />
         <option value="$PROJECT_DIR$/JavaScript/index.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/JavaScript/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/JavaScript/indexvue.js" />
       </list>
     </option>
@@ -143,8 +138,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="343" />
-    <option name="y" value="50" />
+    <option name="x" value="188" />
+    <option name="y" value="155" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -215,15 +210,15 @@
       <workItem from="1547628845919" duration="216000" />
       <workItem from="1547629158248" duration="309000" />
       <workItem from="1547629485672" duration="15932000" />
-      <workItem from="1547792785508" duration="4230000" />
+      <workItem from="1547792785508" duration="7709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20687000" />
+    <option name="totallyTimeSpent" value="24166000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="343" y="50" width="1400" height="1000" extended-state="0" />
+    <frame x="188" y="155" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16740088" />
@@ -273,10 +268,17 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JavaScript/vue.js" />
+    <entry file="file://$PROJECT_DIR$/JavaScript/pastanime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="146" column="75" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="75" />
+        <state relative-caret-position="462">
+          <caret line="146" column="76" selection-start-line="146" selection-start-column="76" selection-end-line="146" selection-end-column="76" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
@@ -285,15 +287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/newanime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        <state relative-caret-position="-408">
+          <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -304,10 +299,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/pastanime.js">
+    <entry file="file://$PROJECT_DIR$/CSS/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        <state relative-caret-position="1122">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
         </state>
       </provider>
     </entry>
@@ -320,15 +315,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" selection-start-line="27" selection-end-line="45" selection-end-column="6" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/indexvue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+        <state relative-caret-position="204">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
         </state>
       </provider>
     </entry>
