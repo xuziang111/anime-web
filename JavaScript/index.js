@@ -1,4 +1,4 @@
-const pastanime = { template: '<div>foo</div>' }
+
 const movie = { template: '<div>bar</div>' }
 
 // 2. 定义路由
@@ -29,7 +29,7 @@ const app = new Vue({
         pagestate:{
             index:0,
             newanime:{data:{},num:0},
-            pastanime:0,
+            pastanime:{data:{},num:0},
             movie:0,
         },
     },
@@ -37,6 +37,11 @@ const app = new Vue({
         newanimeadd:function(data){
             this.pagestate.newanime.num=1
             this.pagestate.newanime.data = data
-        }
+        },
+        pastanimeadd:function(data){
+            console.log('xxx')
+            this.pagestate.pastanime.num=1
+            this.pagestate.pastanime.data = data
+        },
     },
 }).$mount('#app')

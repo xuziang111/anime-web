@@ -40,13 +40,6 @@ main{
 section{
     border:1px solid white;
 }
-.icon-rmxf{
-    display:inline-block;
-    width: 33px;
-    height: 35px;
-    background: url(../Images/qy-dm-pageImg.png);
-    background-position: -80px -160px;
-}
 
 .time-ul{
     display:flex;
@@ -115,6 +108,7 @@ section{
 #anime-nav{
     width:100%;
     border:1px solid white;
+    font-size:16px;
 }
 #anime-nav>ul {
     display:flex;

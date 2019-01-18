@@ -54,31 +54,12 @@ function ajaxerror(data,date){
     })
 }
 }
-function ajaxsuccess(data,date){
-    $(`.timetable>div>div:nth-child(${date})>ul>p`).remove()
-    console.log(date)
-    let temp = ''
-    for(let i=0;data.rmxf.length>i;i++){       
-        temp= temp+`
-        <li>
-            <img src="${data.rmxf[i].img}">
-            <div>
-                <span class="time-title">${data.rmxf[i].title}</span>
-                <span class="time-update">${data.rmxf[i].num}</span>
-            </div>
-        </li>
-        `
-    }
-    $(`.timetable>div>div:nth-child(${date})>ul`).append(temp)
-}
+
 
 data={
     rmxf:[{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'},{title:'revisions',num:'12',img:'Images/time.jpg'}],
 }
-// sendajax(date)
-//测试用，上线换成sendajax(date)
-ajaxsuccess(data,date)
-console.log(week)
+
 
 
 
