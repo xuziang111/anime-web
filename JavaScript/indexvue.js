@@ -33,7 +33,7 @@ const index = Vue.component('index', {
                 <!-- Tab panes -->
 
                    <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane" :id="item.name" v-for="item in timeline.datas">
+                    <div role="tabpanel" :class="item.class" :id="item.name" v-for="item in timeline.datas">
                         <ul class="time-ul">
                           <li v-for="datax in item.datas">
                                 <img :src=datax.img>
@@ -139,30 +139,37 @@ const index = Vue.component('index', {
                 datas: [
                     {
                         datas: [],
-                        name: "Monday"
+                        name: "Monday",
+                        class:'tab-pane'
                     },
                     {
                         datas: [],
-                        name: "Tuesday"
+                        name: "Tuesday",
+                        class:'tab-pane'
                     },
                     {
                         datas: [],
-                        name: "Wednesday"
+                        name: "Wednesday",
+                        class:'tab-pane'
                     },
                     {
                         datas: [],
-                        name: "Thursday"
+                        name: "Thursday",
+                        class:'tab-pane'
                     }, {
                         datas: [],
-                        name: "Friday"
+                        name: "Friday",
+                        class:'tab-pane'
                     },
                     {
                         datas: [],
-                        name: "Saturday"
+                        name: "Saturday",
+                        class:'tab-pane'
                     },
                     {
                         datas: [],
-                        name: "Sunday"
+                        name: "Sunday",
+                        class:'tab-pane'
                     },
                 ]
             },
@@ -207,8 +214,9 @@ const index = Vue.component('index', {
                 },
                 error:function(){
                     console.log(_temp,date)
+                    _temp.ajaxerror(num)
                     //test
-                    _temp.timeline.datas[num].datas = _temp.testdata.tl
+
                     $(`#timetablelist li:eq(${{num}}) a`).tab('show')
                 },
                 complete:function(){
@@ -220,14 +228,26 @@ const index = Vue.component('index', {
             if(this.tlifclick[index]===0){
                 this.tlajax(index)
             }
+            for(let i=0;i<=6;i++){
+                this.timeline.datas[i].class = "tab-pane"
+            }
+            this.timeline.datas[index].class = "tab-pane active"
+        },
+        ajaxerror:function(num){
+            this.timeline.datas[num].datas = this.testdata.tl
+            console.log(num)
+            console.log(this.timeline.datas[num].datas)
         }
+    },
+    created:function(){
+        let date = new Date().getDay()
+        console.log($(`.tab-content div:eq(${date-1})`))
+        // $(`.tab-content div:eq(${date-1})`).addClass('active')
+        this.timeline.datas[date-1].class = "tab-pane active"
+        this.tlclick(date-1)
     },
     mounted:function(){
         let date = new Date().getDay()
-        this.tlclick(date)
-        console.log($(`.tab-content div:eq(${date-1})`))
-        $(`.tab-content div:eq(${date-1})`).addClass('active')
-
         $(`#timetablelist li:eq(${date-1}) a`).tab('show')
     }
 
