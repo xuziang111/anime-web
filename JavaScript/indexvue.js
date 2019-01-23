@@ -32,7 +32,7 @@ const index = Vue.component('index', {
 
                 <!-- Tab panes -->
 
-                   <div class="tab-content">
+                <div class="tab-content">
                     <div role="tabpanel" :class="item.class" :id="item.name" v-for="item in timeline.datas">
                         <ul class="time-ul">
                           <li v-for="datax in item.datas">
@@ -125,12 +125,17 @@ const index = Vue.component('index', {
                         <!--</ul>-->
                     <!--</div>-->
                 </div>
-            </section>
-
-                <section class="text-left rmxf">
-                <h4><span class="icon-rmxf"></span>日漫新番</h4>
-                
-            </section>
+                </section>
+<section class="anime-con-con">
+<h4><span class="icon-rmxf"></span>日漫新番</h4>
+    <div class="anime-container" v-for="item in maindata.newanimeindex">
+        <div class="anime-img-con" ><a :href="item.href"><img v-lazy='item.img' class="anime-img" :src=item.img></a></div>
+        <div class="anime-title-con">
+            <h4>{{item.title}}</h4>
+            <span>更新至{{item.num}}话</span>
+        </div>
+    </div>
+</section>
             </div>
     `,
     data:function() {
@@ -194,7 +199,13 @@ const index = Vue.component('index', {
                     img: 'Images/time.jpg'
                 }, {title: 'revisions', num: '12', img: 'Images/time.jpg'}],
             },
+            maindata:{
+                newanimeindex:[],
+                pastanimeindex:[],
+                ovaindex:[],
+            }
         }
+
     },
     methods:{
         tlajax:function(num){
@@ -237,6 +248,64 @@ const index = Vue.component('index', {
             this.timeline.datas[num].datas = this.testdata.tl
             console.log(num)
             console.log(this.timeline.datas[num].datas)
+        },
+        rmxfajax:function(){
+            $.ajax({
+                type: "get",
+                url: "/timetable",
+                data: date,
+                processData: false,    //false
+                cache: false,    //缓存
+                beforeSend:function(){
+
+                },
+                success: function(data){
+                    // _temp.datas[num].datas = data
+                },
+                error:function(){
+                    console.log(_temp,date)
+                    _temp.ajaxerror(num)
+                    //test
+
+                    $(`#timetablelist li:eq(${{num}}) a`).tab('show')
+                },
+                complete:function(){
+
+                }
+            })
+        },
+        ajaxstart:function (){
+            //测试用
+            let data = {type:'index'}
+            let _temp = this
+            $.ajax({
+                type: "get",
+                url: "/newanime",
+                data: data,
+                success: function(data){
+
+                },
+                error:function(){
+
+                },
+                complete:function(){
+                    let xxx = {
+                        newanimeindex:[{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'}],
+                        pastanimeindex:[{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},],
+                        ovaindex:[{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},]
+
+                    }
+                    _temp.mainajaxsucess(xxx)
+                }
+            })
+        },
+        mainajaxsucess:function(data){
+            let _temp = this
+            Object.keys(this.maindata).forEach(function(currentValue){
+                _temp.maindata[currentValue] = data[currentValue]
+            })
+            Vue.use(VueLazyload)
+            console.log(this.maindata.newanimeindex)
         }
     },
     created:function(){
@@ -245,6 +314,7 @@ const index = Vue.component('index', {
         // $(`.tab-content div:eq(${date-1})`).addClass('active')
         this.timeline.datas[date-1].class = "tab-pane active"
         this.tlclick(date-1)
+        this.ajaxstart()
     },
     mounted:function(){
         let date = new Date().getDay()

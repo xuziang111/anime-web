@@ -43,5 +43,6 @@ const app = new Vue({
             this.pagestate.pastanime.num=1
             this.pagestate.pastanime.data = data
         },
+
     },
 }).$mount('#app')
