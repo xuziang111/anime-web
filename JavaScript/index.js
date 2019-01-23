@@ -27,7 +27,15 @@ const app = new Vue({
     router,
     data:{
         pagestate:{
-            index:0,
+            index:{
+                data:{
+                    timeline:[],
+                    newanimeindex:[],
+                    pastanimeindex:[],
+                    ovaindex:[],
+                },
+                num:0
+                },
             newanime:{data:{},num:0},
             pastanime:{data:{},num:0},
             movie:0,
@@ -39,9 +47,13 @@ const app = new Vue({
             this.pagestate.newanime.data = data
         },
         pastanimeadd:function(data){
-            console.log('xxx')
             this.pagestate.pastanime.num=1
             this.pagestate.pastanime.data = data
+        },
+        indexadd:function(data){
+            console.log(data)
+            this.pagestate.index.num=1
+            this.pagestate.index.data = data
         },
 
     },

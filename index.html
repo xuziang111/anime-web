@@ -38,7 +38,7 @@
 
         #tf-home .overlay {
             /*网页主体高度*/
-            height: 2500px;
+
         }
 
         /*居中内容块*/
@@ -144,7 +144,7 @@
             </ul>
         </nav>
         <main>
-            <router-view  @newanimeopen="newanimeadd" :pagestate='pagestate'  @pastanimeopen="pastanimeadd"></router-view>
+            <router-view @indexopen="indexadd" @newanimeopen="newanimeadd" :pagestate='pagestate'  @pastanimeopen="pastanimeadd"></router-view>
         </main>
     </div>
 </div>

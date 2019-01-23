@@ -10,6 +10,7 @@ const pastanime = Vue.component('pastanime', {
 </ul>
 </nav>
 <section class="anime-con-con text-left">
+<div class="anime-flex">
     <div class="anime-container" v-for="item in animedata.data">
         <div class="anime-img-con" ><a :href="item.href"><img class="anime-img" :src=item.img></a></div>
         <div class="anime-title-con">
@@ -17,6 +18,7 @@ const pastanime = Vue.component('pastanime', {
             <span>更新至{{item.num}}话</span>
         </div>
     </div>
+</div>
 </section>
 </div>
     `,
@@ -47,32 +49,35 @@ const pastanime = Vue.component('pastanime', {
 
                 },
                 success: function(data){
-                    ajaxsuccess(data)
+                    _temp.ajaxsuccess(data)
                 },
                 error:function(){
 
                 },
                 complete:function(){
-                    _temp.ajaxsuccess(data)
+                    let xxx = {data:[{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                            {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
+                        ]}
+                    _temp.ajaxsuccess(xxx)
                 }
             })
         },
         ajaxsuccess:function(data){
-            this.animedata={data:[{title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-                    {title:'佐贺偶像是传奇',num:'12',img:'../Images/201810121539281100.jpg',href:'#'},
-            ]}
+            console.log('123')
+            this.animedata=data
+            console.log(data)
             this.$emit('pastanimeopen',this.animedata)
         }
     }

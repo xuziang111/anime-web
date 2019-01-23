@@ -21,7 +21,7 @@
     flex-direction: column;
 
 }
-.anime-con-con{
+.anime-flex{
     display:flex;
     flex-wrap:wrap;
 }

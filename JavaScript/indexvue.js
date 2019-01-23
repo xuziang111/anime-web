@@ -1,4 +1,5 @@
 const index = Vue.component('index', {
+    props:['pagestate'],
     template: `
             <div>
                 <aside id="anime-aside">
@@ -127,13 +128,27 @@ const index = Vue.component('index', {
                 </div>
                 </section>
 <section class="anime-con-con">
-<h4><span class="icon-rmxf"></span>日漫新番</h4>
+<div class="text-left"><h4><span class="icon-rmxf"></span>日漫新番</h4></div>
+<div class="anime-flex">
     <div class="anime-container" v-for="item in maindata.newanimeindex">
-        <div class="anime-img-con" ><a :href="item.href"><img v-lazy='item.img' class="anime-img" :src=item.img></a></div>
+        <div class="anime-img-con" ><a :href="item.href"><img v-lazy='item.img' class="anime-img" src="../Images/zhanwei.png"></a></div>
         <div class="anime-title-con">
             <h4>{{item.title}}</h4>
             <span>更新至{{item.num}}话</span>
         </div>
+    </div>
+    </div>
+</section>
+<section class="anime-con-con">
+<div class="text-left"><h4><span class="icon-rmxf"></span>历年动画</h4></div>
+<div class="anime-flex">
+    <div class="anime-container" v-for="item in maindata.pastanimeindex">
+        <div class="anime-img-con" ><a :href="item.href"><img v-lazy='item.img' class="anime-img" src="../Images/zhanwei.png"></a></div>
+        <div class="anime-title-con">
+            <h4>{{item.title}}</h4>
+            <span>更新至{{item.num}}话</span>
+        </div>
+    </div>
     </div>
 </section>
             </div>
@@ -283,7 +298,7 @@ const index = Vue.component('index', {
                 url: "/newanime",
                 data: data,
                 success: function(data){
-
+                    pagestate_temp.mainajaxsucess(xxx)
                 },
                 error:function(){
 
@@ -301,11 +316,13 @@ const index = Vue.component('index', {
         },
         mainajaxsucess:function(data){
             let _temp = this
+            console.log(data)
             Object.keys(this.maindata).forEach(function(currentValue){
                 _temp.maindata[currentValue] = data[currentValue]
+                console.log(data[currentValue])
             })
             Vue.use(VueLazyload)
-            console.log(this.maindata.newanimeindex)
+            this.$emit('indexopen',_temp.maindata)
         }
     },
     created:function(){
@@ -314,11 +331,19 @@ const index = Vue.component('index', {
         // $(`.tab-content div:eq(${date-1})`).addClass('active')
         this.timeline.datas[date-1].class = "tab-pane active"
         this.tlclick(date-1)
-        this.ajaxstart()
+
     },
     mounted:function(){
         let date = new Date().getDay()
         $(`#timetablelist li:eq(${date-1}) a`).tab('show')
+
+            this.maindata =  this.pagestate.index.data
+            if(this.pagestate.index.num === 0) {
+                this.ajaxstart()
+                console.log('xxx')
+            }
+            console.log(this.animedata)
+
     }
 
 })

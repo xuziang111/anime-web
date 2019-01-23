@@ -10,6 +10,7 @@ const newanime = Vue.component('newanime', {
 </ul>
 </nav>
 <section class="anime-con-con">
+<div class="anime-flex">
     <div class="anime-container" v-for="item in animedata.data">
         <div class="anime-img-con" ><a :href="item.href"><img class="anime-img" :src=item.img></a></div>
         <div class="anime-title-con">
@@ -17,6 +18,7 @@ const newanime = Vue.component('newanime', {
             <span>更新至{{item.num}}话</span>
         </div>
     </div>
+</div>
 </section>
 </div>
     `,
@@ -47,31 +49,32 @@ const newanime = Vue.component('newanime', {
 
                 },
                 success: function(data){
-                    ajaxsuccess(data)
+                    _temp.ajaxsuccess(data)
                 },
                 error:function(){
 
                 },
                 complete:function(){
-                    _temp.ajaxsuccess(data)
+                    let xxx = {data:[{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                            {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
+                        ]}
+                    _temp.ajaxsuccess(xxx)
                 }
             })
         },
         ajaxsuccess:function(data){
-            this.animedata={data:[{title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                    {title:'辉夜姬想让人告白 天才们的恋爱头脑战',num:'1',img:'../Images/201812311546250656.png',href:'#'},
-                ]}
+            this.animedata=data
             this.$emit('newanimeopen',this.animedata)
         }
     }
