@@ -4,6 +4,9 @@
 #top-carousel img{
 
 }
+img{
+    width:100%;
+}
 #top-carousel-carousel{
     display:flex;
     justify-content: center;
@@ -35,7 +38,7 @@
 *{box-sizing: border-box;margin:0;padding:0;}
 p{margin:0}
 main{
-    margin:0 auto;
+    margin:20px auto;
 }
 section{
     border:1px solid white;
@@ -183,4 +186,7 @@ main > div > section{
 }
 .anime-con-con>div>h4{
     padding-left:10px;
+}
+.time-ul img{
+    width:auto;
 }
