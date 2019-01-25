@@ -33,7 +33,7 @@ const animeinf = Vue.component('newanime', {
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li v-for="(item,index) in source" role="presentation" @click="tlclick(index)" :class="sourceclass[index]">
+    <li v-for="(item,index) in source" role="presentation" @click="tlclick(index)" :class="item.sourceclass">
     <span>{{item.name}}</span>
     </li>
   </ul>
@@ -75,10 +75,10 @@ const animeinf = Vue.component('newanime', {
                 {name: 'bilibili', part: ['#', '#', '#'],sourceclass:'active'},
                 {name: 'aiqiyi', part: ['#', '#', '#'],sourceclass:''}
             ],
+        }
     },
     mounted:function(){
         this.creattabclass()
-        console.log(this.sourceclass)
         setTimeout(()=>console.log(this.sourceclass),10000)
     },
     methods:{
@@ -111,17 +111,16 @@ const animeinf = Vue.component('newanime', {
         },
         tlclick:function(index){
             for(let i=0;i<this.source.length;i++){
-                this.sourceclass[i] = ""
+                this.source[i].sourceclass = ""
             }
-            this.sourceclass[index]= "active"
-            console.log(this.sourceclass)
+            this.source[index].sourceclass= "active"
         },
         creattabclass:function(){
             for(let i=0;i<this.source.length;i++){
                 if(i===0){
-                    this.sourceclass.push('active')
+                    this.source.sourceclass='active'
                 }else{
-                    this.sourceclass.push('')
+                    this.source.sourceclass=''
                 }
             }
         }
