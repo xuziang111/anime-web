@@ -8,7 +8,7 @@ const animeinf = Vue.component('newanime', {
         </div>
         <div id="animeinf-right" class="text-left">
             <div>
-                <h2>{{animedata.title}}</h2>
+                <h2 style="color:white">{{animedata.title}}</h2>
             </div>
             <ul>
                 <li>类型:<span v-for="item in animedata.type">
@@ -25,7 +25,7 @@ const animeinf = Vue.component('newanime', {
         </div>      
     </div>
     <div>
-    <p>简介</p>
+    <h4>简介</h4>
     <p>{{animedata.inf}}</p>
 </div>
 <section>
@@ -83,7 +83,7 @@ const animeinf = Vue.component('newanime', {
     methods:{
         ajaxstart:function (){
             //测试用
-            this.$emit('newanimeopen')
+            console.log($route.params.name)
             let data = {type:'newanime',page:'1'}
             let _temp = this
             $.ajax({

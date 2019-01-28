@@ -10,6 +10,9 @@
 #animeinf-right>ul>li>span{
     padding-right:5px;
 }
+#animeinf-right{
+    margin-left:10px;
+}
 section>div>ul>li>span{
     margin-right: 2px;
     line-height: 1.42857143;
