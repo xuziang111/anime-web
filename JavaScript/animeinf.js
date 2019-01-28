@@ -72,33 +72,33 @@ const animeinf = Vue.component('newanime', {
             },
             source: [
                 {name: 'bilibili', part: ['#1', '#2', '#3'],sourceclass:'active'},
-                {name: 'aiqiyi', part: ['#1', '#2', '#3','#4'],sourceclass:''}
+                {name: '271', part: ['#1', '#2', '#3','#4'],sourceclass:''}
             ],
         }
     },
     mounted:function(){
-        this.creattabclass()
-        setTimeout(()=>console.log(this.sourceclass),10000)
+        this.ajaxstart()
+
     },
     methods:{
         ajaxstart:function (){
             //测试用
-            console.log($route.params.name)
-            let data = {type:'newanime',page:'1'}
+            let name = this.$route.params.name
+            let data = {type:'anime',name:name}
             let _temp = this
             $.ajax({
                 type: "get",
-                url: "/newanime",
+                url: "/anime",
                 data: data,
                 cache: false,    //缓存
-                beforeSend:function(){
-
+                beforeSend:function(data){
+                    _temp.ajaxsuccess(data)
                 },
                 success: function(data){
 
                 },
                 error:function(){
-
+                    // alert('加载失败，请刷新页面重试')
                 },
                 complete:function(){
                     _temp.ajaxsuccess()
@@ -106,6 +106,8 @@ const animeinf = Vue.component('newanime', {
             })
         },
         ajaxsuccess:function(data){
+            // this.animedata=data.animedata
+            // this.source = data.source
             this.creattabclass()
         },
         tlclick:function(index){
@@ -114,7 +116,7 @@ const animeinf = Vue.component('newanime', {
             }
             this.source[index].sourceclass= "active"
         },
-        creattabclass:function(){
+        creattabclass:function(data){
             for(let i=0;i<this.source.length;i++){
                 if(i===0){
                     this.source.sourceclass='active'
