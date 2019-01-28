@@ -39,11 +39,10 @@ const animeinf = Vue.component('newanime', {
   </ul>
 
   <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">...</div>
-    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  <div class="animeinf-panes">
+    <div v-for="item in source" :class="item.sourceclass" >
+    <span v-for="(itema,index) in item.part"><a :href="itema">第{{(index+1)}}集</a></span>
+    </div>
   </div>
 
 </div>
@@ -72,8 +71,8 @@ const animeinf = Vue.component('newanime', {
 
             },
             source: [
-                {name: 'bilibili', part: ['#', '#', '#'],sourceclass:'active'},
-                {name: 'aiqiyi', part: ['#', '#', '#'],sourceclass:''}
+                {name: 'bilibili', part: ['#1', '#2', '#3'],sourceclass:'active'},
+                {name: 'aiqiyi', part: ['#1', '#2', '#3','#4'],sourceclass:''}
             ],
         }
     },

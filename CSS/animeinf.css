@@ -31,3 +31,19 @@ section>div>ul>li.active>span,section>div>ul>li>span:hover{
 section>div>ul>li.active>span{
     cursor: default;
 }
+.animeinf-panes>div{
+    display:none;
+}
+.animeinf-panes>div.active{
+    display:flex;
+    flex-wrap: wrap;
+}
+.animeinf-panes>div>span{
+    border:1px solid white;
+    border-radius: 3px;
+    margin:10px 10px 0 10px;
+    padding:3px 5px;
+}
+.animeinf-panes>div>span:hover{
+    background:rgba(255,255,255,0.3)
+}
