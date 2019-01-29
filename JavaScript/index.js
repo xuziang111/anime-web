@@ -12,6 +12,7 @@ const routes = [
     { path: '/pastanime', component: pastanime },
     { path: '/movie', component: movie },
     { path: '/anime/:name', component: animeinf },
+    { path: '*', component: index },
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
