@@ -76,9 +76,15 @@ const animeinf = Vue.component('newanime', {
             ],
         }
     },
+    watch:{
+        '$route' (to, from) {
+            this.ajaxstart()
+            console.log('xx')
+        }
+    },
     mounted:function(){
         this.ajaxstart()
-
+        console.log('x')
     },
     methods:{
         ajaxstart:function (){
