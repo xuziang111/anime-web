@@ -5,7 +5,12 @@ $("#top-carousel-carousel>div").toArray().forEach((element,index) => {
         $('#top-carousel').carousel(index)
     })
 });
-    Vue.use(VueLazyload)
+    Vue.use(VueLazyload,{
+        // loading图片
+        // loading: 'dist/loading.gif',
+        // error: 'dist/error.png',
+        // attempt: 1
+    })
     console.log('vue')
 // Vue.use(VueLazyload)
 // var week = [0,0,0,0,0,0,0]
